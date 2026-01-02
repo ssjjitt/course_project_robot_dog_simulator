@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+body {
+    background-color: rgb(15, 15, 24);
+    color: aliceblue;
+    font-family: "Tektur", sans-serif;
+    font-weight: 300;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header img {
+    width: 70px;
+    height: auto;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main_ul {
+    background-color: rgba(71, 253, 253, 0.788);
+    border-radius: 30px;
+    padding: 1%;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+    transition: all 0.3s ease;
+}
+
+.main_ul li {
+    list-style-type: none;
+}
+
+.link {
+    color: aliceblue;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.link:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: aliceblue;
+    transition: .3s;
+}
+
+.link:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.link:hover:after {
+    width: 100%;
+}
+
+.main_poster {
+    background-image: url(../img/dogpng.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 110% 0%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.slogan {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.title {
+    font-size: clamp(48px, 8vw, 108px);
+    font-weight: 800;
+    color: rgba(71, 253, 253, 0.788);
+}
+
+.text {
+    font-size: clamp(12px, 3vw, 30px);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.foot {
+    margin-top: 3%;
+    background-color: rgb(42, 42, 53);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0% 2% 0%;
+}
+
+.section_desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.section_content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(71, 253, 253, 0.788);
+}
+
+.section_text {
+    flex: 1;
+}
+
+.section_title {
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 700;
+    color: rgba(71, 253, 253, 0.788);
+    margin-bottom: 16px;
+}
+
+.section_description {
+    font-size: clamp(16px, 1.2vw, 20px);
+    color: aliceblue;
+    line-height: 1.6;
+}
+
+.section_image {
+    flex: 1;
+}
+
+.section_image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Адаптивность для средних экранов */
+@media (max-width: 1024px) {
+    .section_content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .section_image img {
+        max-height: 250px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .section_title {
+        font-size: 22px;
+    }
+
+    .section_description {
+        font-size: 16px;
+    }
+
+    .section_image img {
+        max-height: 200px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1380px) {
+    .main_poster {
+        background-size: 70%;
+        background-position: 110% 0%;
+        height: 65vh;
+    }
+}
+
+@media (max-width: 1199px) {
+    .main_ul {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main_ul {
+        width: 60%;
+    }
+
+    .main_poster {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        margin-left: 0%;
+        margin-right: 0%;
+        align-items: center;
+    }
+
+    .main_ul {
+        width: 70%;
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .main_ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .main_poster {
+        background-size: 150%;
+        background-position: center;
+    }
+
+    .title {
+        font-size: clamp(16px, 8vw, 48px);
+    }
+
+    .text {
+        text-align: center;
+    }
+}

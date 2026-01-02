@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/theory.css">
+    <title>Main</title>
+    <style>
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3%;
+        }
+
+        .tit {
+            text-align: center;
+            font-weight: 500;
+            font-size: clamp(16px, 8vw, 48px);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/ruffle-nightly-2024_09_13-web-selfhosted/ruffle.js"></script>
+    <header class="header">
+        <img src="img/doglog.png" alt="logo">
+    </header>
+    <div class="container">
+        <nav class="navigation">
+            <ul class="main_ul">
+                <li><a class="link" href="main.html">Home</a></li>
+                <li><a class="link" href="theory.html">Теория</a></li>
+                <li><a class="link" href="preview.html">Установка</a></li>
+                <li><a class="link" href="simulator.html">Симулятор</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h3 class="tit">Map</h3>
+
+    <div class="centered">
+        <object data="/map/map.swf" type="application/x-shockwave-flash" width="640" height="640>
+            <param name=" movie" value="/map/map.swf">
+            <param name="quality" value="high">
+            <param name="allowScriptAccess" value="sameDomain">
+            <param name="pluginspage" value="https://ruffle.rs/">
+        </object>
+    </div>
+
+    <h3 class="tit">Video preview</h3>
+
+    <div class="video-container">
+        <video controls width="1280" height="720">
+            <source src="/3d/video_first.mkv" type="video/mp4">
+            <source src="/3d/video_first.mkv" type="video/webm">
+            <p>Ваш браузер не поддерживает видео.</p>
+        </video>
+    </div>
+
+    <div class="video-container">
+        <video controls width="1280" height="720">
+            <source src="/3d/video_walk.mkv" type="video/mp4">
+            <source src="/3d/video_walk.mkv" type="video/webm">
+            <p>Ваш браузер не поддерживает видео.</p>
+        </video>
+    </div>
+
+    <div class="video-container">
+        <video controls width="1280" height="720">
+            <source src="/3d/video_sit.mkv" type="video/mp4">
+            <source src="/3d/video_sit.mkv" type="video/webm">
+            <p>Ваш браузер не поддерживает видео.</p>
+        </video>
+    </div>
+
+    <div class="video-container">
+        <video controls width="1280" height="720">
+            <source src="/3d/video_stand.mkv" type="video/mp4">
+            <source src="/3d/video_stand.mkv" type="video/webm">
+            <p>Ваш браузер не поддерживает видео.</p>
+        </video>
+    </div>
+
+    <footer class="foot">
+        <p>ssjjitt</p>
+        <p>&copy; 2025 DogRobot</p>
+    </footer>
+</body>
+
+</html>
